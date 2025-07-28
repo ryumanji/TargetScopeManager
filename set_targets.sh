@@ -1,5 +1,5 @@
 set_target() {
-  local target="$HOME/work/set_target/_conf/target.conf"
+  local target="$HOME/work/target_scope_manager/_conf/target.conf"
   local ip=""
   local host=""
   local show_status=0
@@ -55,7 +55,7 @@ set_target() {
 
   # -h または引数省略時: ヘルプ表示
   if [ $show_help -eq 1 ] || ( [ -z "$ip" ] && [ -z "$host" ] ); then
-    echo "Usage: set_target -I <IP> -V <HOST>"
+    echo "Usage: tsm -I <IP> -V <HOST>"
     echo "  -I    Set target IP address"
     echo "  -V    Set target host name"
     echo "  -r    Reset target configuration"
